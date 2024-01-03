@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavbarLog: React.FC = () => {
   return (
@@ -67,13 +68,15 @@ const NavbarLog: React.FC = () => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-5">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-
-                  <a
+                <Link to={"/"}>
+                <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     PEMILU PRESIDENT WAKANDA
                   </a>
+                </Link>
+                 
                 </div>
               </div>
             </div>
@@ -96,6 +99,7 @@ const NavbarLog: React.FC = () => {
               >
                 Setting
               </a>
+              <Link to={"/login"}>
               <a
                 href="#"
                 className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -103,6 +107,7 @@ const NavbarLog: React.FC = () => {
               >
                 Login
               </a>
+              </Link> 
 
               <button
                 type="button"

@@ -7,7 +7,7 @@ import Footer from '../Components/Footer'
 const DetailPages: React.FC = () => {
   return (
     <div>
-        <Navbar/>
+      <Navbar/>
       <Detail/>
       
       <Footer/>

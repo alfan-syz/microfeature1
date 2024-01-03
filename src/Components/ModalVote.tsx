@@ -31,7 +31,7 @@ const ModalVote: React.FC = () => {
         <div
           style={{width: "920px", height: "390px"}}
           onClick={() => handleOptionClick("Option 1")}
-          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 1' ? 'bg-yellow-400 text-black' : 'bg-yellow-300'}`}
+          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 1' ? 'bg-yellow-400 text-black' : ''}`}
 
          
           
@@ -54,7 +54,7 @@ const ModalVote: React.FC = () => {
         <div
           style={{width: "920px", height: "390px"}}
           onClick={() => handleOptionClick("Option 2")}
-          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 2' ? 'bg-yellow-400 text-black' : 'bg-yellow-300'}`}
+          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 2' ? 'bg-yellow-400 text-black' : ''}`}
         >
           
           <img
@@ -74,7 +74,7 @@ const ModalVote: React.FC = () => {
         <div
           style={{width: "920px", height: "390px"}}
           onClick={() => handleOptionClick("Option 3")}
-          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 3' ? 'bg-yellow-400 text-black' : 'bg-yellow-300'}`}
+          className={`bg-gray-200 cursor-pointer rounded-xl hover:scale-125 transition-all duration-500 ${selectedOption === 'Option 3' ? 'bg-yellow-400 text-black' : ''}`}
         >
 
           <img

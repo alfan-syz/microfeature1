@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
@@ -67,13 +68,16 @@ const Navbar: React.FC = () => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-5">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-
+                  <Link to={'/'}>
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     PEMILU PRESIDENT WAKANDA
                   </a>
+                  </Link>
+                 
+               
                 </div>
               </div>
             </div>

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../Components/Hero";
-import Blog from "../Components/Blog";
+
 import Footer from "../Components/Footer";
 import Messages from "../Components/Messages";
 import Dummy from "../Mocks/blog.json";
-
-import Navbar from "../Components/Navbar";
+import {blog} from '../types/blog'
 import NavbarLog from "../Components/NavbarLog";
-import { blog } from "../types/blog";
+import Blog from "../Components/Blog";
 
-function HomeLog(props: { isLogin: boolean }) {
+const HomeNotLog: React.FC = () => {
   const [blog, setBlog] = useState<blog[]>([]);
 
   useEffect(() => {
@@ -19,13 +18,13 @@ function HomeLog(props: { isLogin: boolean }) {
 
   return (
     <div>
-      {props.isLogin ? <Navbar /> : <NavbarLog />}
+      <NavbarLog />
       <Hero />
       {blog.map((data: blog, index: number) => {
         return (
           <div key={index}>
             <Blog
-              id={data.id}
+            id={data.id}
               title={data.title}
               author={data.author}
               date={data.date}
@@ -40,6 +39,6 @@ function HomeLog(props: { isLogin: boolean }) {
       <Footer />
     </div>
   );
-}
+};
 
-export default HomeLog;
+export default HomeNotLog;

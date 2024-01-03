@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import Vote from '../Components/Vote'
+import InfoPemilu from '../Components/InfoPemilu'
+import CardCarousel from '../Components/CardCarousel'
+
 
 
 
@@ -12,7 +14,8 @@ const VotePage: React.FC = () => {
   return (
     <div>
       <Navbar/>
- <Vote/>
+ <InfoPemilu/>
+ <CardCarousel/>
       <Footer/>
     </div>
   )

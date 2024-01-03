@@ -1,68 +1,58 @@
-import React from 'react'
+import { useParams } from "react-router-dom";
+import data from "../Mocks/blog.json";
+import React from "react";
 
 const Detail: React.FC = () => {
+  const { id } = useParams();
+  const blog = data.find((item) => item.id === parseInt(id as string));
+
   return (
     <>
-    <div className=" flex flex-col font-inter items-center justify-start mx-auto w-full">
-       
+      <div className=" flex flex-col font-inter items-center justify-start mx-auto w-full">
         <div className="bg-neutral-900 flex flex-col items-center justify-start max-w-[1140px] mx-auto p-[27px] md:px-5 w-full text-stone-400">
           <div className="flex flex-col items-start justify-start mb-[100px] w-[98%] md:w-full">
             <div className="flex flex-row sm:gap-10 items-center justify-between w-[58%] md:w-full">
               <div className="flex flex-row gap-2 items-center justify-start w-[18%]">
-              <i className="fa-solid fa-arrow-left"></i>
-                <div
-                  className="text-black-900 text-center text-xl"
-                  
-                >
+                <i className="fa-solid fa-arrow-left"></i>
+                <div className="text-black-900 text-center text-xl">
                   Beranda
                 </div>
               </div>
               <div className="flex flex-col items-center justify-start">
-                <div
-                  className="text-black-900 text-center text-xl"
-                  
-                >
+                <div className="text-black-900 text-center text-xl">
                   BERITA HARI INI
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-[50px] items-center justify-start mt-[54px] w-full">
-              <div
-                className="md:text-3xl sm:text-[28px] text-[32px] text-black-900 text-center"
-                
-              >
-                <span className="md:text-[38px] sm:text-4xl text-red-200  font-inter text-[40px] font-bold">
-                  KPU DUMBWAYS TETAPKAN 3 MENTOR TERBAIK
-                </span>
+              <div className="md:text-3xl sm:text-[28px] text-[32px] text-black-900 text-center">
+                <span className="md:text-[38px] sm:text-4xl text-red-200  font-inter text-[40px] font-bold"></span>
                 <span className="md:text-[34px] sm:text-[32px] text-black-900 font-inter text-4xl font-bold">
                   <>
-                    {" "}
+                    {blog?.title}
                     <br />
                   </>
                 </span>
                 <span className="md:text-[22px] sm:text-xl text-black-900 font-inter text-2xl font-normal">
                   <>
-                    Super Admin
+                    {blog?.author}
                     <br />
                   </>
                 </span>
                 <span className="md:text-[22px] sm:text-xl text-black-900 font-inter text-2xl font-normal">
                   <>
-                    Senin, 03 Jan 2023
+                    {blog?.date}
                     <br />
                   </>
                 </span>
               </div>
               <img
                 className="h-[530px] sm:h-auto object-cover w-full"
-                src="../public/news.png"
+                src={blog?.image}
                 alt="1699844237water"
               />
             </div>
-            <div
-              className="mt-[62px] text-2xl md:text-[22px] text-black-900 text-justify sm:text-xl"
-              
-            >
+            <div className="mt-[62px] text-2xl md:text-[22px] text-black-900 text-justify sm:text-xl">
               <div>
                 Praesent ac tortor vel urna fermentum luctus. Nam posuere justo
                 ut efficitur dapibus. Sed a lacinia elit. Curabitur eu dapibus
@@ -118,15 +108,14 @@ const Detail: React.FC = () => {
                 bibendum, nulla ac euismod commodo, quam mi vehicula justo, eu
                 dapibus ligula massa vel ligula. Nulla facilisi. Integer sit
                 amet congue massa. Suspendisse potenti.
-              <div/>
+                <div />
+              </div>
             </div>
           </div>
         </div>
-      
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;
