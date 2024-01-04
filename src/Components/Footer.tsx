@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
                 <div className=" text-white flex mb-">
                     <div className="container flex mb-10 ">
                         <div>
-                        <img src= "./public/logo.png" alt= "logo" width="60px"/>
+                        <img src= "../public/logo.png" alt= "logo" width="60px"/>
                         </div>
                         <div className="flex-wrap ms-3">
                         <h5 className="">DUMBWAYS.ID</h5>
